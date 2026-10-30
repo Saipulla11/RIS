@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <title>Запросы</title>
+</head>
+<body>
+<div class="center">
+    <h2>Запросы</h2>
+
+    <h3>Разговоры: время начала и объём по callind_id</h3>
+    <form method="post" action="{{ url_for('query.call_handler') }}">
+        <label for="callind_id">callind_id</label>
+        <input id="callind_id" name="callind_id" type="number" min="1" max="2147483647" required>
+        <input type="submit" value="Показать">
+    </form>
+
+    <h3>Абонент: вся строка таблицы sub по номеру телефона</h3>
+    <form method="post" action="{{ url_for('query.sub_handler') }}">
+        <label for="phone_number">Номер телефона</label>
+        <input id="phone_number" name="phone_number" type="text" required>
+        <input type="submit" value="Показать">
+    </form>
+
+    <h3>Баланс до и после по sub_id и дате обновления</h3>
+    <form method="post" action="{{ url_for('query.balance_handler') }}">
+        <label for="sub_id">sub_id</label>
+        <input id="sub_id" name="sub_id" type="number" min="1" max="2147483647" required>
+        <label for="update_date">Дата обновления</label>
+        <input id="update_date" name="update_date" type="date" required>
+        <input type="submit" value="Показать">
+    </form>
+
+    <p><a href="{{ url_for('main_menu') }}">В главное меню</a></p>
+</div>
+</body>
+</html>

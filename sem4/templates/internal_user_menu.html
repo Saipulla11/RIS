@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <title>Main menu</title>
+</head>
+<body>
+<div class="center">
+    <h4>Вы авторизованы как {{user_group}}</h4>
+
+    <h2>Главное меню</h2>
+    <br><br> <a href="{{url_for('query_bp.request_handler')}}">Запрос товаров по категориям</a>
+    <a href="{{url_for('exit_func')}}">Выйти</a>
+</div>
+</body>
+</html>
