@@ -1,8 +1,0 @@
-{
-    "host": "localhost",
-    "port": 5432,
-    "dbname": "Supermaket",
-    "user": "postgres",
-    "password": "1106",
-    "connect_timeout": 5
-}
